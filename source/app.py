@@ -9,11 +9,13 @@ def info():
         "status": "healthy",
         "timestamp": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "hostname": socket.gethostname(),
+        "env": "dev"
     })
 
 @app.route('/api/vl/healthz')
 def healthz():
     return jsonify({'status': 'ok'}), 200
+
 
 
 if __name__ == '__main__':
