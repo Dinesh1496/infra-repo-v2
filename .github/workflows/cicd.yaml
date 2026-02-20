@@ -25,5 +25,5 @@ jobs:
         context: .
         push: true
         tags: 
-        #we use the github SHA as the tag for the image to ensure that each build is unique and can be traced back to the specific commit that triggered the build.
+        #we use the github SHA as the tag for the img to ensure that each build is unique and can be traced back to the specific commit that triggered the build.
           ${{ env.DOCKERHUB_USERNAME }}/python-app:${{ github.sha }}
